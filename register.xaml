@@ -1,0 +1,63 @@
+﻿<Window x:Name="window_register" x:Class="pokemon.register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pokemon"
+        mc:Ignorable="d"
+        Title="register" Height="500" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <TabControl>
+        <TabItem Header="Sign In" FontSize="20">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="/wallpaper500x6002.png"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Content="User Name" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="24" Style="{StaticResource LabelRegister}" Margin="0,0,10,0"/>
+                <TextBox x:Name="txb_login" Grid.Column="0" Grid.Row="1" Height="50" Width="500" Grid.ColumnSpan="3" MaxLength="50" Style="{StaticResource RoundedTextBox}"/>
+                <Label Grid.Column="0" Grid.Row="2" Content="Password" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="24" Style="{StaticResource LabelRegister}" Margin="0,0,35,0"/>
+                <TextBox x:Name="txb_password" Grid.Column="0" Grid.Row="3" Height="50" Width="500" Grid.ColumnSpan="3" MaxLength="50" Style="{StaticResource RoundedTextBox}"/>
+                <Button x:Name="btn_sign_in" Grid.Column="0" Grid.Row="4" Height="50" Width="500" Content="Sign In" FontSize="24" Grid.ColumnSpan="3" Click="btn_sign_in_Click" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Sign Up" FontSize="20">
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="/wallpaper500x6002.png"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Content="User Name" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="24" Style="{StaticResource LabelRegister}" Margin="0,0,10,0"/>
+                <TextBox x:Name="txb_login_new" Grid.Column="0" Grid.Row="1" Height="50" Width="500" Grid.ColumnSpan="3" MaxLength="50" Style="{StaticResource RoundedTextBox}"/>
+                <Label Grid.Column="0" Grid.Row="2" Content="Password" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="24" Style="{StaticResource LabelRegister}" Margin="0,0,35,0"/>
+                <TextBox x:Name="txb_password_new" Grid.Column="0" Grid.Row="3" Height="50" Width="500" Grid.ColumnSpan="3" MaxLength="50" Style="{StaticResource RoundedTextBox}"/>
+                <Button x:Name="btn_sign_up" Grid.Column="0" Grid.Row="4" Height="50" Width="500" Content="Sign Up" FontSize="24" Grid.ColumnSpan="3" Click="btn_sign_up_Click" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
